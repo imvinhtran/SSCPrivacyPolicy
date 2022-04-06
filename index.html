@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/privacy.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+</head>
+<body>
+    <div class="header">
+        <a href="https://www.sscfinance.io/"><img class="icon-ssc" src="./assets/img/300x300-icon.png" alt=""></a>
+        <div class="header-bg-text">
+            <h1>SSC</h1>
+            <h1>Privacy Policy</h1>
+        </div>
+    </div>
+    <div id="privacy-policy">
+        <div class="privacy-main">
+            <h1 class="privacy-heading">Chính sách bảo mật</h1>
+        </div>
+        <div class="container">
+            <div class="container-heading">
+                <p class="tab-item selecting">I.Nguyên tắc bảo mật</p>
+                <p class="tab-item">II.Phương thức bảo mật</p>
+                <p class="tab-item">III.Bản quyền và thương hiệu</p>
+                <p class="tab-item">IV.Cam kết về bảo mật</p>
+            </div>
+            <div class="tab-content">
+                <div class="tab-content-item active" id="tab-content-0">
+                    <p>SSC Finance đảm bảo rằng các thông tin cá nhân của Quý khách sẽ được lưu trữ và bảo mật theo các quy định của pháp luật.</p>
+                    <p>Những thông tin SSC Finance yêu cầu Quý khách cung cấp chỉ để hiểu rõ hơn nhu cầu và cung cấp các sản phẩm, dịch vụ phù hợp với yêu cầu của Quý khách.</p>
+                    <p>SSC Finance sử dụng thông tin của Quý khách cho các mục đích quản trị, lập các thống kê về tình hình sử dụng App. Qua đó, SSC Finance sẽ có những điều chỉnh cần thiết để tăng hiệu quả và năng lực phục vụ của SSC Finance thông qua App này.</p>
+                    <p>SSC Finance có thể chuyển thông tin cá nhân của Quý khách đến các đơn vị thuộc SSC Finance hoặc các đại lý của chúng tôi trong phạm vi được pháp luật cho phép</p>
+                    <p>Tất cả các đơn vị thuộc SSC Finance, các nhân viên của chúng tôi và tất cả các bên thứ ba được phép truy cập thông tin của Quý khách được yêu cầu phải tuân thủ các nghĩa vụ bảo mật của chúng tôi.</p>
+                </div>
+                <div class="tab-content-item" id="tab-content-1">
+                    <p>Tất cả thông tin của Quý khách gửi tới SSC Finance thông qua App được bảo vệ bởi công nghệ mã hóa để đảm bảo các thông tin của khách hàng được bảo vệ tối đa trên đường truyền.</p>
+                    <p>SSC Finance sẽ thực hiện tất cả các phương thức hợp lý nhất để bảo đảm bảo vệ an toàn thông tin cá nhân của Quý khách và luôn tuân thủ các quy định của pháp luật Việt Nam liên quan đến việc lưu trữ và sử dụng thông tin.</p>
+                </div>
+                <div class="tab-content-item" id="tab-content-2">
+                    <p>SSC Finance là chủ sở hữu của các thương hiệu, biểu tượng và các nhãn mác sản phẩm/dịch vụ đăng tải trên trang App này. Những người truy cập vào App này không được phép sử dụng các tài sản nêu trên nếu không được sự cho phép trước của SSC Finance bằng văn bản.</p>
+                </div>
+                <div class="tab-content-item" id="tab-content-3">
+                    <p>SSC Finance cam kết đảm bảo việc bảo mật thông tin của quý khách trong phạm vi quản lý của SSC Finance. Các thông tin cá nhân của Quý khách sẽ được lưu trữ và bảo mật theo các quy định của pháp luật liên quan đến việc lưu trữ thông tin nhận dạng cá nhân. Mọi thông tin cá nhân của Quý khách được SSC Finance bảo vệ, tránh mọi hoạt động truy cập trái phép từ bất kỳ bên thứ ba nào. Mọi thông tin chi tiết, Quý khách vui lòng liên hệ: <a href="mailto:sscfinancecom@gmail.com">sscfinancecom@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+    
+    const tabItems = $$('.tab-item');
+    const tabContentItems = $$('.tab-content-item');
+
+    tabItems.forEach((tabItem, index) => {
+        const tabContentItem = tabContentItems[index];
+        // console.log(tabItem);
+        tabItem.onclick = function() {
+            $('.tab-content-item.active').classList.remove('active')
+            tabContentItem.classList.add('active');
+
+            $('.tab-item.selecting').classList.remove('selecting')
+            this.classList.add('selecting');
+        };
+
+    })
+</script>
+</html>
