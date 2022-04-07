@@ -96,3 +96,11 @@ html {
     }
 }
 
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    background-color: #142bac;
+}
+
